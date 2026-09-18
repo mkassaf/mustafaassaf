@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Mustafa Assaf — PhD student in Artificial Intelligence at the University of L'Aquila, researching green, trustworthy, human-centered agentic AI for software architecture. Senior backend engineer and software architect since 2013.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Mustafa Assaf">
+<meta property="og:description" content="PhD student in AI · Senior backend engineer &amp; software architect · Agentic AI for software architecture, and green software.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230B6E5B'/><text x='16' y='22' font-family='Helvetica,Arial,sans-serif' font-size='15' font-weight='700' fill='%23F8FAF8' text-anchor='middle'>MA</text></svg>">
+<!-- ARTIFACT:START -->
+<title>Mustafa Assaf</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+
+  :root {
+    color-scheme: light;
+
+    --paper: #EDF1EE;
+    --sheet: #F8FAF8;
+    --ink: #10211C;
+    --ink-soft: #42544D;
+    --ink-faint: #64756E;
+    --rule: #C6D1CB;
+    --rule-soft: #DBE2DD;
+    --grid: rgba(16, 33, 28, .055);
+    --accent: #0B6E5B;
+    --accent-wash: rgba(11, 110, 91, .09);
+    --on-accent: #F6FAF8;
+    --signal: #8A5310;
+
+    --font-display: "IBM Plex Sans Condensed", "Helvetica Neue", "Arial Narrow", sans-serif;
+    --font-body: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+    --measure: 64ch;
+    --gutter: clamp(1rem, 4.5vw, 3.5rem);
+    --maxw: 76rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --paper: #0A1310;
+      --sheet: #101B17;
+      --ink: #E6EDE8;
+      --ink-soft: #AEBDB6;
+      --ink-faint: #7F918A;
+      --rule: #22322B;
+      --rule-soft: #1A2721;
+      --grid: rgba(198, 233, 220, .05);
+      --accent: #57D6AE;
+      --accent-wash: rgba(87, 214, 174, .11);
+      --on-accent: #07120E;
+      --signal: #E0A94B;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --paper: #0A1310;
+    --sheet: #101B17;
+    --ink: #E6EDE8;
+    --ink-soft: #AEBDB6;
+    --ink-faint: #7F918A;
+    --rule: #22322B;
+    --rule-soft: #1A2721;
+    --grid: rgba(198, 233, 220, .05);
+    --accent: #57D6AE;
+    --accent-wash: rgba(87, 214, 174, .11);
+    --on-accent: #07120E;
+    --signal: #E0A94B;
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3 { text-wrap: balance; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .sheet {
+    max-width: var(--maxw);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  .band { border-top: 1px solid var(--rule); }
+  .section { padding-block: clamp(2.75rem, 7vw, 4.75rem); }
+
+  /* ---------- top bar ---------- */
+
+  .topbar {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 10;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: .65rem;
+    font-family: var(--font-mono);
+    font-size: .68rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  .monogram {
+    font-weight: 500;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .topbar nav { display: flex; gap: clamp(.7rem, 3.2vw, 1.9rem); }
+  .topbar nav a {
+    text-decoration: none;
+    color: var(--ink-faint);
+    padding-block: .15rem;
+    border-bottom: 1px solid transparent;
+    transition: color .18s ease, border-color .18s ease;
+  }
+  .topbar nav a:hover { color: var(--ink); border-bottom-color: var(--accent); }
+
+  /* ---------- hero ---------- */
+
+  .hero { position: relative; overflow: hidden; }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 1.5rem 1.5rem;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 82%);
+    mask-image: linear-gradient(to bottom, #000 0%, transparent 82%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: clamp(2.25rem, 5vw, 3.5rem);
+    padding-block: clamp(2.75rem, 8vw, 6rem) clamp(2.5rem, 6vw, 4.25rem);
+  }
+  @media (min-width: 62rem) {
+    .hero-inner {
+      grid-template-columns: minmax(0, 1.65fr) minmax(18rem, 1fr);
+      align-items: start;
+    }
+  }
+
+  .eyebrow {
+    margin: 0 0 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-family: var(--font-mono);
+    font-size: .7rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .eyebrow::before {
+    content: "";
+    width: .5rem;
+    height: .5rem;
+    background: var(--accent);
+    flex: none;
+  }
+
+  .name {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(3rem, 10.5vw, 6.25rem);
+    line-height: .92;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+  }
+
+  .roles {
+    list-style: none;
+    margin: 1.15rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem .75rem;
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .roles li { display: flex; align-items: center; gap: .75rem; }
+  .roles li + li::before { content: "/"; color: var(--accent); }
+
+  .lede {
+    margin: 1.75rem 0 0;
+    max-width: var(--measure);
+    font-size: clamp(1.02rem, 1.7vw, 1.15rem);
+    color: var(--ink-soft);
+  }
+  .lede strong { color: var(--ink); font-weight: 500; }
+
+  .actions {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+  }
+  .btn {
+    font-family: var(--font-mono);
+    font-size: .74rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .62rem 1.05rem;
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    background: transparent;
+    transition: border-color .18s ease, color .18s ease, background .18s ease;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+  }
+  .btn-primary:hover { background: transparent; color: var(--accent); }
+
+  /* ---------- title block ---------- */
+
+  .titleblock {
+    border: 1px solid var(--rule);
+    background: var(--sheet);
+  }
+  .titleblock .field { padding: .95rem 1.1rem; border-top: 1px solid var(--rule-soft); }
+  .titleblock .field:first-child { border-top: 0; }
+  .titleblock dt {
+    font-family: var(--font-mono);
+    font-size: .64rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .titleblock dd {
+    margin: .3rem 0 0;
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .titleblock dd span {
+    display: block;
+    margin-top: .25rem;
+    font-family: var(--font-mono);
+    font-size: .7rem;
+    font-weight: 400;
+    letter-spacing: .02em;
+    line-height: 1.55;
+    color: var(--ink-faint);
+    text-transform: none;
+  }
+
+  /* ---------- section heads ---------- */
+
+  .sec-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+  }
+  .sec-label {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .sec-rule { flex: 1; height: 1px; background: var(--rule); }
+  .sec-meta {
+    font-family: var(--font-mono);
+    font-size: .66rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  /* ---------- research ---------- */
+
+  .thesis {
+    margin: 0;
+    max-width: 30ch;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4.4vw, 2.6rem);
+    line-height: 1.15;
+  }
+  @media (min-width: 52rem) { .thesis { max-width: 24ch; } }
+  .thesis .key { font-style: normal; color: var(--accent); }
+
+  .research-grid { display: grid; gap: clamp(1.75rem, 4vw, 3rem); }
+  @media (min-width: 52rem) {
+    .research-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+  }
+  .research-note {
+    margin: 0;
+    max-width: var(--measure);
+    color: var(--ink-soft);
+  }
+  .research-note + .research-note { margin-top: 1rem; }
+
+  .aims { display: grid; gap: 1.5rem 2rem; margin-top: clamp(2rem, 5vw, 3rem); }
+  @media (min-width: 40rem) { .aims { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 68rem) { .aims { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .aim { border-top: 2px solid var(--accent); padding-top: .85rem; }
+  .aim h3 {
+    margin: 0 0 .4rem;
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  .aim p { margin: 0; font-size: .95rem; color: var(--ink-soft); }
+
+  /* ---------- timeline entries ---------- */
+
+  .entries { border-bottom: 1px solid var(--rule-soft); }
+  .entry {
+    display: grid;
+    gap: .55rem 2rem;
+    padding-block: 1.7rem;
+    border-top: 1px solid var(--rule-soft);
+  }
+  @media (min-width: 48rem) { .entry { grid-template-columns: 11.5rem minmax(0, 1fr); } }
+
+  .entry-when {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .2rem .7rem;
+    font-family: var(--font-mono);
+    font-size: .74rem;
+    letter-spacing: .02em;
+    color: var(--ink-faint);
+  }
+  @media (min-width: 48rem) {
+    .entry-when { flex-direction: column; gap: .35rem; padding-top: .3rem; }
+  }
+  .entry-when .range { color: var(--ink-soft); }
+  .entry-when .now {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    color: var(--accent);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-size: .64rem;
+  }
+  .entry-when .now::before {
+    content: "";
+    width: .45rem;
+    height: .45rem;
+    background: currentColor;
+  }
+
+  .entry-role {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.15rem, 2.4vw, 1.38rem);
+    line-height: 1.25;
+  }
+  .entry-org { margin: .2rem 0 0; font-size: 1rem; color: var(--ink-soft); }
+  .entry-org .org { color: var(--ink); }
+  .entry-org .sep { color: var(--rule); padding-inline: .3rem; }
+  .entry-note {
+    margin: .6rem 0 0;
+    max-width: var(--measure);
+    font-size: .95rem;
+    color: var(--ink-soft);
+  }
+
+  .tags { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin: .85rem 0 0; padding: 0; }
+  .tags li {
+    font-family: var(--font-mono);
+    font-size: .66rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
+    padding: .2rem .5rem;
+  }
+
+  /* ---------- contact ---------- */
+
+  .contact-lede {
+    margin: 0 0 2rem;
+    max-width: var(--measure);
+    font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  }
+  .channels { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  @media (min-width: 46rem) {
+    .channels { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 2rem; }
+  }
+  .channels li { border-top: 1px solid var(--rule); padding-block: 1.1rem; }
+  .ch-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: .64rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: .35rem;
+  }
+  .channels a {
+    font-family: var(--font-mono);
+    font-size: .92rem;
+    letter-spacing: -.01em;
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: .1rem;
+    word-break: break-word;
+    transition: color .18s ease, border-color .18s ease;
+  }
+  .channels a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .channels a .ext { color: var(--ink-faint); }
+
+  /* ---------- footer ---------- */
+
+  .foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .5rem 1.5rem;
+    padding-block: 1.6rem;
+    font-family: var(--font-mono);
+    font-size: .66rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  }
+
+  @media print {
+    .topbar, .hero::before { display: none; }
+    body { background: #fff; color: #000; font-size: 11pt; }
+    .band, .entry, .channels li { border-color: #bbb; }
+    .btn { display: none; }
+  }
+</style>
+</head>
+<body>
+<!-- ============================ top bar ============================ -->
+<div class="topbar">
+  <div class="sheet topbar-inner">
+    <span class="monogram">M. Assaf</span>
+    <nav aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ============================ hero ============================ -->
+<header class="hero">
+  <div class="sheet hero-inner">
+    <div class="hero-main">
+      <p class="eyebrow">Agentic AI &amp; software architecture</p>
+      <h1 class="name">Mustafa Assaf</h1>
+      <ul class="roles">
+        <li>PhD Student</li>
+        <li>Senior Backend Engineer</li>
+        <li>AI Research Enthusiast</li>
+        <li>Software Architecture Designer</li>
+      </ul>
+      <p class="lede">
+        I'm a first-year PhD student working at the intersection of
+        <strong>agentic AI systems</strong>, <strong>software architecture</strong>, and
+        <strong>energy-efficient AI</strong> — after more than a decade building backend systems
+        at Cisco and as a software architect. My research designs green, trustworthy,
+        human-centered agentic AI systems that can reliably design software architectures.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:mustafakassaf@gmail.com">Email me</a>
+        <a class="btn" href="https://github.com/mkassaf" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/dr-mustafa-assaf/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <dl class="titleblock">
+      <div class="field">
+        <dt>Doctorate</dt>
+        <dd>PhD, Artificial Intelligence
+          <span>Università degli Studi dell'Aquila · Nov 2025 → Oct 2029</span>
+        </dd>
+      </div>
+      <div class="field">
+        <dt>Practice</dt>
+        <dd>Senior Backend Engineer &amp; Software Architect
+          <span>Upwork · Nov 2022 → present · Remote</span>
+        </dd>
+      </div>
+      <div class="field">
+        <dt>Teaching</dt>
+        <dd>Instructor
+          <span>An-Najah National University · 2021 → 2026 · Nablus</span>
+        </dd>
+      </div>
+      <div class="field">
+        <dt>Engineering since</dt>
+        <dd>2013
+          <span>Cisco · EXALT Technologies · Middlesex University · Infinite Tiers</span>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</header>
+
+<!-- ============================ research ============================ -->
+<section id="research" class="band">
+  <div class="sheet section">
+    <div class="sec-head">
+      <span class="sec-label">Research</span>
+      <span class="sec-rule"></span>
+      <span class="sec-meta">Year 1 of 4</span>
+    </div>
+
+    <div class="research-grid">
+      <h2 class="thesis">
+        Agentic AI that is <em class="key">green</em>, <em class="key">trustworthy</em> and
+        <em class="key">human-centered</em> — and that <em class="key">reliably</em> designs
+        software architectures.
+      </h2>
+      <div>
+        <p class="research-note">
+          Architectural design is judgement work: trade-offs between quality attributes, made under
+          incomplete information and lived with for years. My question is what it takes for agentic
+          systems to take part in that work credibly — and what the energy those systems burn should
+          cost them in the evaluation.
+        </p>
+        <p class="research-note">
+          The research sits in the AI PhD programme at the University of L'Aquila, and draws on
+          thirteen years of building and architecting production backends — most of them on Cisco
+          network-management platforms, where architectural decisions are measured in uptime.
+        </p>
+      </div>
+    </div>
+
+    <div class="aims">
+      <div class="aim">
+        <h3>Green</h3>
+        <p>Treat the energy an agentic system consumes as a first-class quality attribute, not an afterthought.</p>
+      </div>
+      <div class="aim">
+        <h3>Trustworthy</h3>
+        <p>Architectural decisions an agent proposes should be inspectable, explainable and open to challenge.</p>
+      </div>
+      <div class="aim">
+        <h3>Human-centered</h3>
+        <p>Agents that work alongside architects and keep people in the decision loop, rather than replacing them.</p>
+      </div>
+      <div class="aim">
+        <h3>Reliable</h3>
+        <p>Design support that holds up across systems and contexts — dependable, not occasionally impressive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ experience ============================ -->
+<section id="experience" class="band">
+  <div class="sheet section">
+    <div class="sec-head">
+      <span class="sec-label">Experience</span>
+      <span class="sec-rule"></span>
+      <span class="sec-meta">2012 → present</span>
+    </div>
+
+    <div class="entries">
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">Nov 2022 — Present</span>
+          <span>3 yrs 11 mos</span>
+          <span class="now">Current</span>
+        </div>
+        <div>
+          <h3 class="entry-role">Senior Backend Engineer &amp; Software Architect</h3>
+          <p class="entry-org"><span class="org">Upwork</span><span class="sep">·</span>Full-time<span class="sep">·</span>Remote</p>
+          <ul class="tags">
+            <li>Software Architecture</li>
+            <li>Agile Software Development</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">Oct 2024 — Jan 2026</span>
+          <span>1 yr 4 mos</span>
+        </div>
+        <div>
+          <h3 class="entry-role">Instructor</h3>
+          <p class="entry-org"><span class="org">An-Najah National University</span><span class="sep">·</span>Full-time<span class="sep">·</span>Nablus, West Bank</p>
+          <ul class="tags">
+            <li>University Lecturing</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">Sep 2021 — Feb 2024</span>
+          <span>2 yrs 6 mos</span>
+        </div>
+        <div>
+          <h3 class="entry-role">Instructor</h3>
+          <p class="entry-org"><span class="org">An-Najah National University</span><span class="sep">·</span>Part-time<span class="sep">·</span>Nablus, West Bank</p>
+          <ul class="tags">
+            <li>C#</li>
+            <li>OOP</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">Sep 2014 — Nov 2022</span>
+          <span>8 yrs 3 mos</span>
+        </div>
+        <div>
+          <h3 class="entry-role">Software Engineer</h3>
+          <p class="entry-org"><span class="org">Cisco</span><span class="sep">·</span>Palestinian Authority</p>
+          <p class="entry-note">Device Pack developer on Prime Infrastructure (PI); backend developer on EPNM.</p>
+          <ul class="tags">
+            <li>Dojo</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">Mar 2014 — Nov 2022</span>
+          <span>8 yrs 9 mos</span>
+        </div>
+        <div>
+          <h3 class="entry-role">Software Engineer</h3>
+          <p class="entry-org"><span class="org">EXALT Technologies Ltd.</span><span class="sep">·</span>Palestinian Authority</p>
+          <p class="entry-note">Full-stack engineer at Cisco.</p>
+          <ul class="tags">
+            <li>C#</li>
+            <li>JSP</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">Jan 2019 — Jan 2020</span>
+          <span>1 yr 1 mo</span>
+        </div>
+        <div>
+          <h3 class="entry-role">Full-stack Developer</h3>
+          <p class="entry-org"><span class="org">Middlesex University</span><span class="sep">·</span>Part-time<span class="sep">·</span>Greater London, United Kingdom</p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">Jun 2013 — Feb 2014</span>
+          <span>9 mos</span>
+        </div>
+        <div>
+          <h3 class="entry-role">Software Engineering</h3>
+          <p class="entry-org"><span class="org">Infinite Tiers</span><span class="sep">·</span>Palestinian Authority</p>
+          <p class="entry-note">IBM WebSphere e-commerce developer.</p>
+          <ul class="tags">
+            <li>IBM WebSphere Commerce</li>
+            <li>JSP</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">Jun 2012 — Sep 2012</span>
+          <span>4 mos</span>
+        </div>
+        <div>
+          <h3 class="entry-role">Training</h3>
+          <p class="entry-org"><span class="org">Experts Turnkey Solutions</span><span class="sep">·</span>Palestinian Authority</p>
+          <p class="entry-note">Oracle Application Development Framework (Oracle ADF).</p>
+          <ul class="tags">
+            <li>JSP</li>
+            <li>OOP</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ education ============================ -->
+<section id="education" class="band">
+  <div class="sheet section">
+    <div class="sec-head">
+      <span class="sec-label">Education</span>
+      <span class="sec-rule"></span>
+      <span class="sec-meta">2008 → 2029</span>
+    </div>
+
+    <div class="entries">
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">Nov 2025 — Oct 2029</span>
+          <span class="now">In progress</span>
+        </div>
+        <div>
+          <h3 class="entry-role">PhD, Artificial Intelligence</h3>
+          <p class="entry-org"><span class="org">Università degli Studi dell'Aquila</span><span class="sep">·</span>L'Aquila, Italy</p>
+          <ul class="tags">
+            <li>Artificial Intelligence</li>
+            <li>Software Architecture</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">Jul 2026</span>
+          <span>Graduate summer school</span>
+        </div>
+        <div>
+          <h3 class="entry-role">International Software Architecture PhD School — iSAPS 2026</h3>
+          <p class="entry-org"><span class="org">Lorentz Center</span><span class="sep">·</span>7th edition</p>
+          <p class="entry-note">
+            An intensive five-day curriculum on advanced software architecture theories, tools and
+            methods — including AI-enabled systems, LLMs in architecture, and green software — with
+            joint academic–industrial breakout groups solving technical case studies and drafting
+            future research agendas.
+          </p>
+          <ul class="tags">
+            <li>Software Architecture</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">2015 — 2018</span>
+        </div>
+        <div>
+          <h3 class="entry-role">Master's Degree, Software Engineering</h3>
+          <p class="entry-org"><span class="org">Birzeit University</span><span class="sep">·</span>Palestine</p>
+          <ul class="tags">
+            <li>Eclipse</li>
+            <li>OOP</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">2017</span>
+        </div>
+        <div>
+          <h3 class="entry-role">Master's Degree, Computer Software Engineering</h3>
+          <p class="entry-org"><span class="org">Middlesex University</span><span class="sep">·</span>London, United Kingdom</p>
+          <ul class="tags">
+            <li>Tableau</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">2016</span>
+          <span>Summer school</span>
+        </div>
+        <div>
+          <h3 class="entry-role">Summer School, Computer Software Engineering</h3>
+          <p class="entry-org"><span class="org">University of Koblenz and Landau</span><span class="sep">·</span>Germany</p>
+          <p class="entry-note">
+            Scientific sessions across software engineering topics, workshops running a real research
+            experiment, industry presentations on tools, methods, IDEs and frameworks, and research
+            methodology sessions on paradigms, framing research questions and choosing methods.
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">2008 — 2013</span>
+        </div>
+        <div>
+          <h3 class="entry-role">Bachelor's Degree, Computer Engineering</h3>
+          <p class="entry-org"><span class="org">An-Najah National University</span><span class="sep">·</span>Nablus, West Bank</p>
+          <ul class="tags">
+            <li>Eclipse</li>
+            <li>OOP</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-when">
+          <span class="range">1996 — 2008</span>
+          <span>Grade 95.0</span>
+        </div>
+        <div>
+          <h3 class="entry-role">High School, Scientific Stream</h3>
+          <p class="entry-org"><span class="org">Al Shaheed Abu Jehad School</span></p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ contact ============================ -->
+<section id="contact" class="band">
+  <div class="sheet section">
+    <div class="sec-head">
+      <span class="sec-label">Contact</span>
+      <span class="sec-rule"></span>
+      <span class="sec-meta">Three channels</span>
+    </div>
+
+    <p class="contact-lede">
+      Reach me directly by email — the code is on GitHub, and the full professional record on LinkedIn.
+    </p>
+
+    <ul class="channels">
+      <li>
+        <span class="ch-label">Email</span>
+        <a href="mailto:mustafakassaf@gmail.com">mustafakassaf@gmail.com</a>
+      </li>
+      <li>
+        <span class="ch-label">GitHub</span>
+        <a href="https://github.com/mkassaf" target="_blank" rel="noopener">github.com/mkassaf <span class="ext">↗</span></a>
+      </li>
+      <li>
+        <span class="ch-label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/dr-mustafa-assaf/" target="_blank" rel="noopener">in/dr-mustafa-assaf <span class="ext">↗</span></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer class="band">
+  <div class="sheet foot">
+    <span>Mustafa Assaf</span>
+    <span>Static page · no trackers · revised Sep 2026</span>
+  </div>
+</footer>
+<!-- ARTIFACT:END -->
+</body>
+</html>
